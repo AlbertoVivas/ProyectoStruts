@@ -18,5 +18,10 @@
 <s:textfield name="edad" label="Edad"></s:textfield>
 <s:submit></s:submit>
 </s:form>
+
+<s:form action="eid">
+<s:textfield name="id" label="Id empleado"></s:textfield>
+<s:submit></s:submit>
+</s:form>
 </body>
 </html>
