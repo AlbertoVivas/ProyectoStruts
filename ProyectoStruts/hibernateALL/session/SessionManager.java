@@ -1,7 +1,7 @@
 /**
  * 
  */
-package practica1.hibernate;
+package session;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -20,9 +20,7 @@ public class SessionManager {
 	private static StandardServiceRegistryBuilder builder;
 	private static SessionFactory factory;
 	
-	@SuppressWarnings("unused")
 	private  static SessionManager sessionManager = new SessionManager();
-
 	
 
 	private SessionManager(){
@@ -44,19 +42,13 @@ public class SessionManager {
 	}
 	
 	
-	public static void closeFactory(SessionFactory sf){
+	@SuppressWarnings("static-access")
+	public static void closeFactory(){
 		try{
-			sf.close();
+			sessionManager.factory.close();
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-	}
-
-	/**
-	 * @return
-	 */
-	public static SessionFactory obtenerFactory() {
-		return factory;
 	}
 	
 	

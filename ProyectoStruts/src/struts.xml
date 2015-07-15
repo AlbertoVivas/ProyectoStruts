@@ -35,7 +35,11 @@
  		<action name="eid" class="EmpleadoId" method="execute">
 			<result name="success">/Empleado.jsp</result>
 		</action>
- 		
+		
+		<action name="ca" class="coche.CocheAccion" method="execute">
+			<result name="success">/Coche.jsp</result>
+		</action>
+ 		<!-- caca -->
 	</package>
 
 </struts>

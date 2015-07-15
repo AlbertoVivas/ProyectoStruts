@@ -23,5 +23,16 @@
 <s:textfield name="id" label="Id empleado"></s:textfield>
 <s:submit></s:submit>
 </s:form>
+
+<s:form action="ca">
+<s:textfield name="marca" label="Marca"></s:textfield>
+<!--<s:textfield name="modelo" label="Modelo"></s:textfield>
+<s:textfield name="matricula" label="Matricula"></s:textfield>
+<s:textfield name="fecha_compra" label="Fecha compra"></s:textfield>
+<s:textfield name="potencia" label="Potencia"></s:textfield>
+<s:textfield name="cc" label="CC"></s:textfield>-->
+<s:submit></s:submit>
+</s:form>
+
 </body>
 </html>

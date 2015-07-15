@@ -1,7 +1,7 @@
 /**
  * 
  */
-package practica1.hibernate;
+package interfaceRecuperable;
 
 import java.sql.SQLException;
 
@@ -11,5 +11,5 @@ import java.sql.SQLException;
  * 
  */
 public interface Recuperable {
-	Object leerEmpleado(Object id) throws SQLException;
+	Object leerEmpleado(int id) throws SQLException;
 }

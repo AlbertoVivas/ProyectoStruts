@@ -1,6 +1,8 @@
 import com.opensymphony.xwork2.ActionSupport;
 
-import practica1.hibernate.EmpleadoServices;
+import Empleados.EmployeesServices;
+import empleadoHibernateDAO.EmpleadoHibernateDAO;
+import interfaceRecuperable.Recuperable;
 import tablas_Clases.Employees;
 
 /**
@@ -48,7 +50,10 @@ public class EmpleadoId extends ActionSupport{
 	 */
 	@Override
 	public String execute() throws Exception {
-		empleado = EmpleadoServices.obtenerEmpleadoId(id);
+		EmployeesServices es = new EmployeesServices();
+		Recuperable emp_hiber = new EmpleadoHibernateDAO();
+		es.setRecuperable(emp_hiber);
+		empleado = (Employees) es.leerEmpleado(id);
 		return SUCCESS;
 	}
 	

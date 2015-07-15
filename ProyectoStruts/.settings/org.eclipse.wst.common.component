@@ -2,6 +2,12 @@
     <wb-module deploy-name="ProyectoStruts">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/JPA"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/hibernateALL"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/interfaces"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jdbcALL"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/services"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/mains"/>
         <property name="context-root" value="ProyectoStruts"/>
         <property name="java-output-path" value="/ProyectoStruts/build/classes"/>
     </wb-module>

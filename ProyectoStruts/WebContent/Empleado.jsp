@@ -10,20 +10,20 @@
 <body>
 <h1>Empleado</h1>
 
-<table>
-<tr>
-<td>ID de empleado</td>
-<td>ID de trabajo</td>
-<td>Nombre</td>
-<td>Apellido</td>
-<td>email</td>
-<td>telefono</td>
-<td>Fecha de contrato</td>
-<td>Salario</td>
-<td>Comisión</td>
+<table border="1" bordercolor="#0000FF">
+<tr align="center">
+<td bgcolor="#00BFFF">ID de empleado</td>
+<td bgcolor="#00BFFF">ID de trabajo</td>
+<td bgcolor="#00BFFF">Nombre</td>
+<td bgcolor="#00BFFF">Apellido</td>
+<td bgcolor="#00BFFF">email</td>
+<td bgcolor="#00BFFF">Telefono</td>
+<td bgcolor="#00BFFF">Fecha de contrato</td>
+<td bgcolor="#00BFFF">Salario</td>
+<td bgcolor="#00BFFF">Comisión</td>
 </tr> 
 
-<tr>
+<tr align="center">
 <td><s:property value="empleado.employeeId"/></td>
 <td><s:property value="empleado.jobs.jobId"/></td>
 <td><s:property value="empleado.firstName"/></td>
