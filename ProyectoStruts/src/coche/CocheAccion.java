@@ -24,9 +24,11 @@ public class CocheAccion extends ActionSupport{
 	}
 	
 	@TypeConversion(converter="coche.ConversorCoche")
-	public void setCoche(Coche c){
-		coche=c;
+	public void setCoche(Coche coche){
+		this.coche=coche;
 	}
+	
+	@TypeConversion(converter="coche.ConversorCoche")
 	public Coche getCoche(){
 		return coche;
 	}

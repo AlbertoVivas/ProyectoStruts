@@ -54,13 +54,12 @@ public class Coche {
 	public void setCc(float cc) {
 		this.cc = cc;
 	}
-	//public Coche(String marca, String modelo, String matricula, Date fecha_compra, int potencia, float cc) {
-	public Coche(String marca, String modelo, String matricula, int potencia, float cc) {
-		//super();
+	public Coche(String marca, String modelo, String matricula, Date fecha_compra, int potencia, float cc) {
+	//public Coche(String marca, String modelo, String matricula, int potencia, float cc) {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.matricula = matricula;
-		//this.fecha_compra = fecha_compra;
+		this.fecha_compra = fecha_compra;
 		this.potencia = potencia;
 		this.cc = cc;
 	}
@@ -74,15 +73,14 @@ public class Coche {
 	 */
 	@Override
 	public String toString() {
-		/*String resp="";
+		String resp="";
 			resp+="Marca: "+marca;
 			resp+=" Modelo: "+modelo;
 			resp+=" Matricula: "+matricula;
-			//resp+=" Fecha de compra: "+fecha_compra;
+			resp+=" Fecha de compra: "+fecha_compra;
 			resp+=" Potencia: "+potencia;
 			resp+=" CC: "+cc;
-		return resp;*/
-		return this.marca;
+		return resp;
 	}
 	
 }

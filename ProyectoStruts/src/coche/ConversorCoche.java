@@ -28,17 +28,17 @@ public class ConversorCoche extends StrutsTypeConverter{
 		int potencia = Integer.parseInt(arg1[4]);
 		float cc = Float.parseFloat(arg1[5]);
 		
-		/*
+		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
 		Date fecha_compra = null;
 		try {
 			fecha_compra = sdf.parse(arg1[3]);
 		} catch (ParseException e) {
 			e.printStackTrace();
-		} */
-		//Coche coche = new Coche(marca, modelo, matricula, fecha_compra, potencia, cc);
+		} 
+		Coche coche = new Coche(marca, modelo, matricula, fecha_compra, potencia, cc);
 		//Coche coche = new Coche(marca, modelo, matricula, potencia, cc);
-		Coche coche = new Coche(marca);
+		//Coche coche = new Coche(marca);
 		return coche;
 		
 	}
