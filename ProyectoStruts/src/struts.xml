@@ -5,10 +5,21 @@
 
 <struts>
 
-	<constant name="struts.devMode" value="true" />
+	<constant name="struts.devMode" value="false" />
 
 	<package name="basicstruts2" extends="struts-default">
-
+		<interceptors>
+            <!-- <interceptor name="conInterfaz" class="org.apache.struts.helloworld.action.InterceptorCVE"/>
+            <interceptor name="sinInterfaz" class="org.apache.struts.helloworld.action.InterceptorSVE"/>-->
+            
+            <interceptor-stack name="mipiladefiltros">
+        		<interceptor-ref name="timer" />
+				<interceptor-ref name="params"/>
+				<!-- <interceptor-ref name="conInterfaz"/>
+				<interceptor-ref name="sinInterfaz"/> -->
+				<interceptor-ref name="defaultStack"/>
+        	</interceptor-stack>
+   		</interceptors>
         <!-- If no class attribute is specified the framework will assume success and 
         render the result index.jsp -->
         <!-- If no name value for the result node is specified the success value is the default -->
@@ -38,7 +49,25 @@
 		
 		<action name="ca" class="coche.CocheAccion" method="execute">
 			<result name="success">/Coche.jsp</result>
+			<result name="input">/Error.jsp</result>
 		</action>
+		
+		<action name="UploadFile" class="fileUpload.UploadFileAction">
+            <param name="directorio">C:\Alberto Vivas\Val</param>
+            
+            <interceptor-ref name="defaultStack"> <!-- de este modo se garantiza el uso de defualt stack y sólo se parametrizar el intrepcetor fileUpload -->
+                <!-- <param name="fileUpload.maximumSize">999999999</param>-->
+                <param name="fileUpload.allowedTypes">text/plain,image/*,application/*</param>
+                <param name="validation.excludeMethods">espera</param>
+            </interceptor-ref>
+            <interceptor-ref name="logger" />
+            <interceptor-ref name="timer" />
+            <interceptor-ref name="execAndWait"/>
+    		<result name="wait">/FileUpload/espera.jsp</result>
+            <result name="success">/FileUpload/UploadFileSuccess.jsp</result>
+            <result name="input">/FileUpload/upfile.jsp</result>
+
+        </action>
  		<!-- caca -->
 	</package>
 

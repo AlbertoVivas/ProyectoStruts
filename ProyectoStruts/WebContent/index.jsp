@@ -31,8 +31,11 @@
 <s:textfield name="coche" label="Fecha compra"></s:textfield>
 <s:textfield name="coche" label="Potencia"></s:textfield>
 <s:textfield name="coche" label="CC"></s:textfield>
+<s:if test=""></s:if>
 <s:submit></s:submit>
 </s:form>
+
+<a href="http://localhost:8090/ProyectoStruts/FileUpload/upfile.jsp">UploadFile</a>
 
 </body>
 </html>

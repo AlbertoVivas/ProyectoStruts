@@ -10,5 +10,8 @@
 <body>
 <h1>Coches</h1>
 <s:property value="coche"/>
+<s:if test="hasActionMessages()">
+<s:actionmessage/>
+</s:if>
 </body>
 </html>
