@@ -16,4 +16,13 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     
+    <servlet>
+  	<servlet-name>CargarMenu</servlet-name>
+  	<servlet-class>prueba.ajax.CargarMenu</servlet-class>    
+    </servlet>
+  <servlet-mapping>
+    <servlet-name>CargarMenu</servlet-name>
+    <url-pattern>/PruebaAjax/CargarMenu</url-pattern>
+  </servlet-mapping>
+    
 </web-app>

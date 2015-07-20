@@ -37,8 +37,6 @@ public class ConversorCoche extends StrutsTypeConverter{
 			e.printStackTrace();
 		} 
 		Coche coche = new Coche(marca, modelo, matricula, fecha_compra, potencia, cc);
-		//Coche coche = new Coche(marca, modelo, matricula, potencia, cc);
-		//Coche coche = new Coche(marca);
 		return coche;
 		
 	}
@@ -49,8 +47,7 @@ public class ConversorCoche extends StrutsTypeConverter{
 	@Override
 	public String convertToString(Map arg0, Object arg1) {
 		Coche coche = (Coche)arg1;
-		return coche.toString();
-		
+		return coche.toString();	
 	}
 	
 	

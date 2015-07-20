@@ -31,17 +31,19 @@ public class CocheAccion extends ActionSupport{
 		if(coche.getMatricula().length()!=6){
 				addActionError("Matricula incorrecta debe tener 6 caracteres");
 			}
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
 		Date when=null;
+		/*
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
 		try {
-			when = sdf.parse("17/07/2015");
+			//when = sdf.parse("17/07/2015");
+			
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
-
+		}	*/
+		when = new Date();
 		if(coche.getFecha_compra().after(when)){
-			addActionError("es imposible que comprases un coche mañana o despues");
+			addActionError("es imposible que comprases un coche mañana o despues, hoy es: "+when);
 		}
 		if(coche.getMarca().equals("Bmw") || coche.getMarca().equals("BMW")|| coche.getMarca().equals("bmw")){
 			addActionMessage("Muy bien, tienes un BMW!");
